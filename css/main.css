@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive&family=Montserrat:ital,wght@1,400;1,800&family=Questrial&display=swap');
+
+body {
+  margin: 0;
+  background-color: #ffd191;
+}
+
+/* Header */
+header {
+  color: #211e20;
+  font-family: 'Cutive';
+  font-weight: 800;
+  font-style: italic;
+
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+h1 a {
+  margin: 0;
+
+  color: #211e20;
+  font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
+  font-size: clamp(36px, 12vw, 7rem);
+
+  text-transform: uppercase;
+  text-shadow: 4px 5px 1px #66605c;
+}
+
+h1 a:hover {
+  color: #ff924f;
+}
+
+
+.fa-eye {
+  color: #ff924f;
+}
+
+/* Horizontal Nav Bar */
+
+nav {
+  display: flex;
+  justify-content: center;
+
+  background-color: #ff924f;
+}
+
+.cb {
+  opacity: 0;
+}
+
+ul {
+  margin: 0 2rem 0 1rem;
+  padding: 0;
+}
+
+ul li {
+  display: inline-flex;
+  justify-content: space-around;
+
+  list-style: none;
+
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-variant: small-caps;
+  line-height: 1rem;
+}
+
+li a {
+  padding: 1rem;
+  align-content: center;
+
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+}
+
+i.hlogo {
+  display: none;
+}
+
+a {
+  border: 1px solid transparent;
+  border-radius: 2px 2px 0 0;
+
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  border: 1px solid transparent;
+  border-radius: 2px 2px 0 0;
+
+  font-family: 'Questrial';
+  font-weight: bold;
+}
+
+.button {
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 2px 2px 0 0;
+  font-size: 2rem;
+
+  color: transparent;
+
+  background: rgb(149, 146, 199);
+  background: linear-gradient(90deg, rgba(149, 146, 199, 1) 28%, #ffd191 49%, rgba(187, 74, 162, 1) 100%);
+  -webkit-mask-image: url(/images/ticket-alt-solid.svg);
+  mask-image: url(/images/ticket-alt-solid.svg);
+  mask-size: contain;
+}
+
+.tix {
+  display: none;
+}
+
+.wrap {
+  display: inline-block;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  border: 1px solid transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.button:hover {
+  background: none;
+  mask-image: unset;
+  -webkit-mask-image: unset;
+}
+
+.wrap:hover .tix {
+  display: block;
+
+  border: 1px solid transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.wrap:hover .button {
+  display: none;
+}
+
+
+/* Main */
+
+h2 {
+  color: #211e20;
+  font-family: 'Cutive', Verdana, Tahoma, sans-serif;
+  font-size: clamp(36px, 12vw, 3rem);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+img {
+  height: 80px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax( min((51rem - 100%) * 999, 100%), 1fr));
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+.item {
+  border: 2px solid #ff924f;
+  box-shadow: -5px 5px #66605c;
+  margin: 0.8rem;
+  padding: 3rem 2rem 5rem 2rem;
+
+  text-align: center;
+  font-family: 'Cutive', Verdana, Tahoma, sans-serif;
+  font-size: clamp(18px, 10vw, 1rem);
+  line-height: 2rem;
+}
+
+h3 {
+  font-family: 'Cutive', Verdana, Tahoma, sans-serif;
+  font-size: clamp(28px, 12vw, 2rem);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-style: italic;
+}
+
+/* MEDIA QUERIES for Nav */
+/*  Hamburger Menu */
+@media screen and (max-width: 824px) {
+
+  nav {
+    background-color: #ff924f;
+  }
+
+  .hlogo {
+    color: #ffd191;
+    text-align: center;
+    font-size: 5rem;
+
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    -ms-transition: -ms-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+  }
+
+  .hlogo:hover {
+    transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+  }
+
+  .hmenu {
+    display: none;
+  }
+
+  /* #ham:checked~.hlogo {
+    transform-box: fill-box;
+    transform-origin: center;
+  } */
+
+  #ham:checked~.hmenu {
+    display: block;
+  }
+
+  li a {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .container {
+    margin-left: 2rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: max-content;
+    grid-template-areas:
+      "item1"
+      "item2"
+      /* "icon" */
+      "item3"
+      "item4";
+  }
+
+  .item3 {
+    grid-area: item4;
+    align-self: center;
+  }
+
+  .item4 {
+    grid-area: item3;
+    align-self: center;
+
+    font-size: 20rem;
+  }
+}
+
+/* DESKTOP*/
+@media screen and (min-width: 824px) {
+
+  .hlogo {
+    display: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+}
