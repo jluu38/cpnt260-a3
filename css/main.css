@@ -17,6 +17,10 @@ header {
   text-align: center;
 }
 
+h1 {
+  padding: 1rem 0 1rem 0;
+  margin-bottom: 0;
+}
 h1 a {
   margin: 0;
 
@@ -77,14 +81,14 @@ i.hlogo {
 }
 
 a {
-  border: 1px solid transparent;
-  border-radius: 2px 2px 0 0;
+  /* border: 1px solid transparent;
+  border-radius: 2px 2px 0 0; */
 
   color: black;
   text-decoration: none;
 }
 
-a:hover {
+.hmenu a:hover {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
 
@@ -133,22 +137,74 @@ a:hover {
 
 /* Main */
 
+.subh2 {
+  display: grid;
+  justify-items: center;
+}
+
 h2 {
+  margin-bottom: 0;
   color: #211e20;
   font-family: 'Aktiv-Grotesk-Extended';
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(36px, 12vw, 3rem);
+  font-size: clamp(1rem, 7vw, 3rem);
   letter-spacing: 0.5rem;
+
   text-transform: uppercase;
   text-align: center;
 }
 
+.loader {
+  margin: 0;
+  width: clamp(30rem, 20vw, 45rem);
+  height: 50px;
+
+  /* justify-self: center; */
+  overflow: hidden;
+
+
+}
+
+.loader::before {
+content: attr(data-text);
+
+position: relative;
+color: #ffd191;
+font-size: 4em;
+top: -42px;
+width: calc(100% + 27px);
+text-decoration: wavy;
+text-decoration-color: #b99bdb;
+text-decoration-line: underline;
+animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    left: -3px;
+  }
+  100% {
+    left: -30px;
+  }
+}
+
 .grid {
+  --preferred-value: ((var(--max-card-width) * var(--cols) - var(--gap) * 2) - 100%) * 999;
+  --gap: 20px;
+  --max-card-width: 300px;
+  --cols: 3;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
   /* grid-template-columns: 1fr 1fr 1fr; */
   /* grid-template-columns: repeat(auto-fit, minmax( min((51rem - 100%) * 999, 100%), 1fr)); */
+  grid-template-columns:
+    repeat(auto-fit, minmax(clamp(33.3333% - var(--gap),
+          var(--preferred-value),
+          100%),
+        1fr
+      )
+    );
   grid-template-rows: auto;
   grid-gap: 20px;
 
@@ -177,12 +233,12 @@ p i {
   font-size: 1.5rem;
 }
 
-img {
+.item img {
   padding: 0.1rem;
   height: 300px;
 
   border: 3px solid #b99bdb;
-  box-shadow: 5px 7px #66605c;
+  box-shadow: 10px 10px rgba(102, 96, 92, 0.5);
 }
 
 figcaption {
@@ -203,6 +259,27 @@ h3 {
 footer {
   text-align: center;
   font-style: italic;
+}
+
+.socnav {
+  list-style: none;
+
+  display: inline-flex;
+}
+
+.socnav img {
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  box-shadow: none;
+}
+
+.socnav a:hover {
+  box-shadow: 1em 1em 10px #b99bdb;
+  border-radius: 50%;
+
+  letter-spacing: 0;
 }
 
 /* MEDIA QUERIES for Nav */

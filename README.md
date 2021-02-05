@@ -20,16 +20,14 @@ The goal for the site is entirely focused on advertising future/current film scr
 
 ## Attributions
 
-- [Header and nav bar icons](https://fontawesome.com/license/free) - Font Awesome
-- [Card images](https://pixelbuddha.net/icons/mario-pixel-icon-collection) - Dmitrii Vlasov
+- [Header, nav bar, and social icons](https://fontawesome.com/license/free) - Font Awesome
+- [Letterboxd social icon](https://letterboxd.com/about/brand/) - Letterboxd
 - [Clamp measurement tool](https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/) - Pedro Rodriguez
 - [Clamp equation for grid](https://blog.logrocket.com/flexible-layouts-without-media-queries/) - Dannie Vinther
-- [Montserrat, Cutive and Questrial fonts](https://fonts.google.com/?query=cuti&sidebar.open=true&selection.family=Cutive|Montserrat:wght@100) - sourced from Google Fonts
+- [Montserrat, Cutive fonts](https://fonts.google.com/?query=cuti&sidebar.open=true&selection.family=Cutive|Montserrat:wght@100) - sourced from Google Fonts
+- [Aktiv Grotesk Extended font](https://fonts.adobe.com/fonts/aktiv-grotesk) - Adobe Fonts
 - [Colour Palette](https://lospec.com/palette-list/warmlight) - _sedona
-- Film summaries from [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Copyrights) (respectively)
-  - [Before Sunrise](https://en.wikipedia.org/wiki/Before_Sunrise)
-  - [Pan's Labyrinth](https://en.wikipedia.org/wiki/Pan%27s_Labyrinth)
-  - [Possession](https://en.wikipedia.org/wiki/Possession_(1981_film))
+- [Squiggly line animation](https://www.youtube.com/watch?v=BfdHnxpnQyw) - Online Tutorials on Youtube
 
   https://web.law.duke.edu/cspd/publicdomainday/2020/
   https://expo.uoregon.edu/spotlight/public-domain-day-2020
