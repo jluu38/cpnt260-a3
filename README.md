@@ -19,6 +19,7 @@ An image gallery to display upcoming/current showings is most effective as it is
 - Mistakenly added alts to FontAwesome icons last time - now changed to aria-labels.
 - Also left alts blank for posters. General consensus is that it's redundant with figcaptions?
 - Also lifted squiggly line animation code. Couldn't properly execute svg animation, and figured it was okay since it's not relevant to the assignment.
+- Page broke down in mobile; fixed, but still breaks down around 300px.
 
 ## Attributions
 
