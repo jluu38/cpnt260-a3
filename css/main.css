@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive&family=Montserrat:ital,wght@1,400;1,800&family=Questrial&display=swap');
+@import url("https://use.typekit.net/igf7ufo.css");
 
 body {
   margin: 0;
@@ -22,7 +23,6 @@ h1 a {
   color: #211e20;
   font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
   font-size: clamp(36px, 12vw, 7rem);
-
   text-transform: uppercase;
   text-shadow: 4px 5px 1px #66605c;
 }
@@ -32,8 +32,8 @@ h1 a:hover {
 }
 
 
-.fa-eye {
-  color: #ff924f;
+header .fa-eye {
+  color: #b99bdb;
 }
 
 /* Horizontal Nav Bar */
@@ -88,23 +88,17 @@ a:hover {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
 
-  font-family: 'Questrial';
-  font-weight: bold;
+  font-family: 'Aktiv-Grotesk-Extended';
+  font-variant: none;
+  text-transform: uppercase;
 }
 
 .button {
   display: block;
-  border: 1px solid transparent;
-  border-radius: 2px 2px 0 0;
-  font-size: 2rem;
+  align-self: center;
 
-  color: transparent;
-
-  background: rgb(149, 146, 199);
-  background: linear-gradient(90deg, rgba(149, 146, 199, 1) 28%, #ffd191 49%, rgba(187, 74, 162, 1) 100%);
-  -webkit-mask-image: url(/images/ticket-alt-solid.svg);
-  mask-image: url(/images/ticket-alt-solid.svg);
-  mask-size: contain;
+  font-size: 2.2rem;
+  color: #211e20;
 }
 
 .tix {
@@ -137,38 +131,67 @@ a:hover {
   display: none;
 }
 
-
 /* Main */
 
 h2 {
   color: #211e20;
-  font-family: 'Cutive', Verdana, Tahoma, sans-serif;
+  font-family: 'Aktiv-Grotesk-Extended';
+  font-weight: 400;
+  font-style: italic;
   font-size: clamp(36px, 12vw, 3rem);
+  letter-spacing: 0.5rem;
   text-transform: uppercase;
   text-align: center;
 }
 
-img {
-  height: 80px;
-}
-
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax( min((51rem - 100%) * 999, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* grid-template-columns: repeat(auto-fit, minmax( min((51rem - 100%) * 999, 100%), 1fr)); */
   grid-template-rows: auto;
   grid-gap: 20px;
+
+  justify-items: center;
+  align-items: baseline;
 }
 
 .item {
-  border: 2px solid #ff924f;
-  box-shadow: -5px 5px #66605c;
-  margin: 0.8rem;
-  padding: 3rem 2rem 5rem 2rem;
+  display: grid;
+  object-fit: contain;
+  justify-items: center;
 
-  text-align: center;
   font-family: 'Cutive', Verdana, Tahoma, sans-serif;
   font-size: clamp(18px, 10vw, 1rem);
   line-height: 2rem;
+}
+
+.item p {
+  color: #211e20;
+  font-family: 'Aktiv-Grotesk-Extended';
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+p i {
+  font-size: 1.5rem;
+}
+
+img {
+  padding: 0.1rem;
+  height: 300px;
+
+  border: 3px solid #b99bdb;
+  box-shadow: 5px 7px #66605c;
+}
+
+figcaption {
+  padding-top: 1rem;
+  min-width: 0.5rem;
+  font-size: clamp(18px, 12vw, 1rem);
+
+  letter-spacing: 0.3rem;
+  text-align: center;
 }
 
 h3 {
@@ -188,9 +211,11 @@ footer {
 
   nav {
     background-color: #ff924f;
+    justify-content: center;
   }
 
   .hlogo {
+    margin-right: 0.5rem;
     color: #ffd191;
     text-align: center;
     font-size: 5rem;
@@ -210,11 +235,6 @@ footer {
     display: none;
   }
 
-  /* #ham:checked~.hlogo {
-    transform-box: fill-box;
-    transform-origin: center;
-  } */
-
   #ham:checked~.hmenu {
     display: block;
   }
@@ -224,11 +244,15 @@ footer {
     line-height: 2rem;
   }
 
+  li a:hover {
+    letter-spacing: normal;
+  }
+
   .container {
-    margin-left: 2rem;
+    margin: 0;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: max-content;
+    grid-template-columns: 30ch;
     grid-template-areas:
       "item1"
       "item2"
