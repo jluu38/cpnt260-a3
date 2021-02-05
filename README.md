@@ -9,7 +9,7 @@ Created and maintained by Jessica Luu
 
 Continued from assignment 2, this is now the *Coming Soon* page. The goal for the site is entirely focused on advertising future/current film screenings.
 
-An image gallery to display upcoming/current showings is most effective as it is easy to identify film posters and reading figure captions for titles and showtimes.
+An image gallery to display upcoming/current showings is most effective as it is easy to identify film posters and to read figure captions for titles and showtimes.
 
 ## Comments (removed from the html and css files)
 
