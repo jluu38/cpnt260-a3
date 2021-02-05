@@ -1,22 +1,24 @@
 # CPNT 260: Image Gallery and Social Icons
+
 Created and maintained by Jessica Luu
 
 - [Repository](https://github.com/jluu38/cpnt260-a3/)
 - [GitHub Page](https://jluu38.github.io/cpnt260-a3/)
 
 ## Summary
-Continued from assignment 2, this is now the *Coming Soon* page.
 
-The goal for the site is entirely focused on advertising future/current film screenings (half the nav bar is dedicated to a list of films). Cards are the easiest way to do this because summaries are brief and are usually more appealing to scroll through.
+Continued from assignment 2, this is now the *Coming Soon* page. The goal for the site is entirely focused on advertising future/current film screenings.
+
+An image gallery to display upcoming/current showings is most effective as it is easy to identify film posters and reading figure captions for titles and showtimes.
 
 ## Comments (removed from the html and css files)
 
-- Struggled with adjusting hover effects so they wouldn't impact the rest of the page (the pastel ticket on the nav bar being the most annoying)
-- Built the nav bar from scratch using both grid and flex. Went much better than last assignment.
-- But nav bar still loses it around the 430px-ish mark.
-- Couldn't figure out how to lock the hamburger menu icon down since it flits back-and-forth while hovered on. Didn't work in nor out of the nav bar grid.
-- After deployment on GH Pages, ticket svg on the nav bar does not appear, but it still appears locally
-  - tried changing the svg, adjusting HTML, and made sure mask-image was supported
+- Lifted gallery grid code from Dannie Vinther (attributed below). My attempts remain in the CSS file. I could only achieve three-columns to two-columns to one column, and not three to one as instructed.
+- Vintage posters came in a variety of sizes. Had difficulties with keeping them responsive AND properly centered/positioned, so I specified their heights.
+  - Specifying their widths made for uneven heights and looked weird.
+- Mistakenly added alts to FontAwesome icons last time - now changed to aria-labels.
+- Also left alts blank for posters. General consensus is that it's redundant with figcaptions?
+- Also lifted squiggly line animation code. Couldn't properly execute svg animation, and figured it was okay since it's not relevant to the assignment.
 
 ## Attributions
 

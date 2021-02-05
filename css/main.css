@@ -9,7 +9,7 @@ body {
 /* Header */
 header {
   color: #211e20;
-  font-family: 'Cutive';
+  font-family: 'Cutive', Verdana, Tahoma, sans-serif;
   font-weight: 800;
   font-style: italic;
 
@@ -20,12 +20,13 @@ header {
 h1 {
   padding: 1rem 0 1rem 0;
   margin-bottom: 0;
+
 }
 h1 a {
   margin: 0;
 
   color: #211e20;
-  font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
   font-size: clamp(36px, 12vw, 7rem);
   text-transform: uppercase;
   text-shadow: 4px 5px 1px #66605c;
@@ -35,13 +36,11 @@ h1 a:hover {
   color: #ff924f;
 }
 
-
 header .fa-eye {
   color: #b99bdb;
 }
 
 /* Horizontal Nav Bar */
-
 nav {
   display: flex;
   justify-content: center;
@@ -81,9 +80,6 @@ i.hlogo {
 }
 
 a {
-  /* border: 1px solid transparent;
-  border-radius: 2px 2px 0 0; */
-
   color: black;
   text-decoration: none;
 }
@@ -92,7 +88,7 @@ a {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
 
-  font-family: 'Aktiv-Grotesk-Extended';
+  font-family: 'Aktiv-Grotesk-Extended', sans-serif;
   font-variant: none;
   text-transform: uppercase;
 }
@@ -136,7 +132,6 @@ a {
 }
 
 /* Main */
-
 .subh2 {
   display: grid;
   justify-items: center;
@@ -145,7 +140,7 @@ a {
 h2 {
   margin-bottom: 0;
   color: #211e20;
-  font-family: 'Aktiv-Grotesk-Extended';
+  font-family: 'Aktiv-Grotesk-Extended', sans-serif;
   font-weight: 400;
   font-style: italic;
   font-size: clamp(1rem, 7vw, 3rem);
@@ -159,24 +154,21 @@ h2 {
   margin: 0;
   width: clamp(30rem, 20vw, 45rem);
   height: 50px;
-
-  /* justify-self: center; */
   overflow: hidden;
-
-
 }
 
 .loader::before {
 content: attr(data-text);
-
 position: relative;
-color: #ffd191;
-font-size: 4em;
 top: -42px;
 width: calc(100% + 27px);
+
+color: #ffd191;
+font-size: 4em;
 text-decoration: wavy;
 text-decoration-color: #b99bdb;
 text-decoration-line: underline;
+
 animation: animate 0.5s linear infinite;
 }
 
@@ -190,21 +182,18 @@ animation: animate 0.5s linear infinite;
 }
 
 .grid {
-  --preferred-value: ((var(--max-card-width) * var(--cols) - var(--gap) * 2) - 100%) * 999;
-  --gap: 20px;
-  --max-card-width: 300px;
-  --cols: 3;
-  display: grid;
+  /* below are my attempts at a grid for three columns to one column on mobile w/out media query*/
   /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
   /* grid-template-columns: 1fr 1fr 1fr; */
   /* grid-template-columns: repeat(auto-fit, minmax( min((51rem - 100%) * 999, 100%), 1fr)); */
+  --preferred-value: ((var(--max-card-width) * var(--cols) - var(--gap) * 2) - 100%) * 999;
+  --gap: 20px;
+  --max-card-width: 282px;
+  --cols: 3;
+
+  display: grid;
   grid-template-columns:
-    repeat(auto-fit, minmax(clamp(33.3333% - var(--gap),
-          var(--preferred-value),
-          100%),
-        1fr
-      )
-    );
+    repeat(auto-fit, minmax(clamp(33.3333% - var(--gap), var(--preferred-value), 100%), 1fr));
   grid-template-rows: auto;
   grid-gap: 20px;
 
@@ -224,7 +213,7 @@ animation: animate 0.5s linear infinite;
 
 .item p {
   color: #211e20;
-  font-family: 'Aktiv-Grotesk-Extended';
+  font-family: 'Aktiv-Grotesk-Extended', sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
 }
@@ -265,26 +254,33 @@ footer {
   list-style: none;
 
   display: inline-flex;
+  padding-top: 0;
+  margin-bottom: 0.5rem;
 }
 
 .socnav img {
   width: 30px;
-  height: 30px;
+  height: 28px;
 
   border: none;
   box-shadow: none;
+  background: transparent;
 }
 
-.socnav a:hover {
-  box-shadow: 1em 1em 10px #b99bdb;
-  border-radius: 50%;
+.socnav a {
+  padding: 2px;
+  margin: 2rem;
+}
 
-  letter-spacing: 0;
+.socnav a > *:hover {
+  box-shadow: 5px 5px 8px 3px #b99bdb;
+  /* border: 1px solid transparent; */
+  border-radius: 60%;
 }
 
 /* MEDIA QUERIES for Nav */
 /*  Hamburger Menu */
-@media screen and (max-width: 824px) {
+@media screen and (max-width: 820px) {
 
   nav {
     background-color: #ff924f;
@@ -352,7 +348,7 @@ footer {
 }
 
 /* DESKTOP*/
-@media screen and (min-width: 824px) {
+@media screen and (min-width: 820px) {
 
   .hlogo {
     display: none;
