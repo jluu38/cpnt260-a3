@@ -20,6 +20,7 @@ An image gallery to display upcoming/current showings is most effective as it is
 - Also left alts blank for posters. General consensus is that it's redundant with figcaptions?
 - Also lifted squiggly line animation code. Couldn't properly execute svg animation, and figured it was okay since it's not relevant to the assignment.
 - Page broke down in mobile; fixed, but still breaks down around 300px.
+  - On mobile, when the hamburger menu is opened, the page expands with a horizontal scrollbar. I think it's from the animation.
 
 ## Attributions
 
